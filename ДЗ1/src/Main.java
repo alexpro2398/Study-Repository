@@ -75,11 +75,5 @@ public class Main
         MyText = MyEditedText;
         MyEditedText = MyText.replace("#","");
         System.out.println(MyEditedText);
-
-
-
-
-
-
     }
 }
