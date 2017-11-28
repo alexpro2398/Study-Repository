@@ -28,7 +28,7 @@ public class MyArrayOps
         return(myArrayEnter);
     }
 
-    public static int[] bubbleSort(int[] mySort)
+    public static int[] nativeSort(int[] mySort)
     {
         Arrays.sort(mySort);
         return(mySort);
@@ -51,7 +51,7 @@ public class MyArrayOps
         return(mySort);
     }
 
-    public static int[] nativeSort(int[] mySort)
+    public static int[] BubbleSort(int[] mySort)
     {
         for(int myI1 = 0; myI1 < mySort.length; myI1++)
         {
