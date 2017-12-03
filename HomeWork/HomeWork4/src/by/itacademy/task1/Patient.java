@@ -23,14 +23,14 @@ public class Patient
 
     void printInfo()
     {
-        System.out.print("Name: " + name + "\nAge: " + age);
+        System.out.print("Pacient " + name + " - Age = " + age + ", ");
         if(insurance)
         {
-            System.out.print("\nHas insurance");
+            System.out.print("has insurance\n");
         }
         else
         {
-            System.out.print("\nHas no insurance");
+            System.out.print("has no insurance\n");
         }
     }
 

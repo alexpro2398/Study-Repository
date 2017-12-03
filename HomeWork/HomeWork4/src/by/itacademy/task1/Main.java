@@ -6,7 +6,7 @@ public class Main
 {
     public static void main(String[] args)
     {
-        Patient[] myPatient = new Patient[5];
+        Patient[] myPatient = new Patient[3];
         for(int myCounter = 0; myCounter < myPatient.length; myCounter++)
         {
             Patient tempPatient = new Patient();
@@ -19,18 +19,18 @@ public class Main
 
     public static void enterAll(Patient enterPatient)
     {
-        System.out.println("Creating a new patient:");
+        System.out.print("\nCreating a new patient:\n");
         Main.enterName(enterPatient);
         Main.enterAge(enterPatient);
         Main.enterInsurance(enterPatient);
-        System.out.println("Pacient " + enterPatient.name + " - Age = " + enterPatient.age + "\n");
+        enterPatient.printInfo();
     }
 
     public static void enterInsurance(Patient enterPatient)
     {
         Scanner myScanner = new Scanner(System.in);
         System.out.println("Does this patient have an insurance? (true/false)");
-        enterPatient.insurance = myScanner.hasNextBoolean();
+        enterPatient.insurance = myScanner.nextBoolean();
     }
 
     public static void enterAge(Patient enterPatient)
@@ -49,6 +49,7 @@ public class Main
 
     public static void searchByName(Patient[] searchPatientArray)
     {
+        System.out.print("\n");
         Scanner myScanner = new Scanner(System.in);
         System.out.println("Searching by name. Enter name.");
         String searchName = myScanner.nextLine();
@@ -56,13 +57,14 @@ public class Main
         {
             if(searchName.equals(searchPatientArray[myCounter].name))
             {
-                System.out.println("Pacient " + searchPatientArray[myCounter].name + " - Age = " + searchPatientArray[myCounter].age + "\n");
+                searchPatientArray[myCounter].printInfo();
             }
         }
     }
 
     public static void searchByAge(Patient[] searchPatientArray)
     {
+        System.out.print("\n");
         Scanner myScanner = new Scanner(System.in);
         System.out.println("Searching by age. Enter age.");
         int searchAge = myScanner.nextInt();
@@ -70,7 +72,7 @@ public class Main
         {
             if(searchAge == searchPatientArray[myCounter].age)
             {
-                System.out.println("Pacient " + searchPatientArray[myCounter].name + " - Age = " + searchPatientArray[myCounter].age + "\n");
+                searchPatientArray[myCounter].printInfo();
             }
         }
     }
