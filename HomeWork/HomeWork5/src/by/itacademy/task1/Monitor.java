@@ -6,5 +6,6 @@ public class Monitor extends Display
     @Override
     public void powerOn()
     {
+        System.out.println("No signal");
     }
 }
