@@ -6,6 +6,7 @@ public class TV extends Display
     @Override
     public void powerOn()
     {
+        System.out.println("Chanel #1");
     }
 
 }
